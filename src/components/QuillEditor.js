@@ -17,14 +17,15 @@ class QuillEditor extends PureComponent {
   render() {
     return (
       <ReactQuill
+        placeholder='Your thoughs here ...'
         value={this.state.text}
+        modules={QuillEditor.modules}
+        formats={QuillEditor.formats}
         onChange={(value, delta, source) => {
           if (source === 'user') {
             this.handleChange(value)
           }
         }}
-        modules={QuillEditor.modules}
-        formats={QuillEditor.formats}
       />
     )
   }
