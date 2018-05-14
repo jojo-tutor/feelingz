@@ -2,7 +2,7 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import { applyMiddleware, createStore, compose } from 'redux'
 import createSagaMiddleware from 'redux-saga'
-import { BrowserRouter as Router } from 'react-router-dom'
+import { BrowserRouter } from 'react-router-dom'
 import {Provider} from 'react-redux'
 import Index from './containers/Index'
 import sagas from './redux/sagas'
@@ -19,9 +19,9 @@ sagaMiddleware.run(sagas)
 
 ReactDOM.render(
   <Provider store={store}>
-    <Router>
-      <Index />
-    </Router>
+    <BrowserRouter>
+      <Index/>
+    </BrowserRouter>
   </Provider>,
   document.getElementById('root')
 )

@@ -1,9 +1,9 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import Index from '../containers/Index';
+import React from 'react'
+import ReactDOM from 'react-dom'
+import Index from '../containers/Index'
 
 it('renders without crashing', () => {
-  const div = document.createElement('div');
-  ReactDOM.render(<Index />, div);
-  ReactDOM.unmountComponentAtNode(div);
-});
+  const div = document.createElement('div')
+  ReactDOM.render(<Index />, div)
+  ReactDOM.unmountComponentAtNode(div)
+})

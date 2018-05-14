@@ -1,7 +1,7 @@
-import React, { Component } from 'react';
+import React, { PureComponent } from 'react'
 import { Navbar, Nav, NavItem, NavDropdown, MenuItem } from 'react-bootstrap'
 
-class NavBar extends Component {
+class NavBar extends PureComponent {
   render() {
     return (
       <Navbar inverse collapseOnSelect>
@@ -41,4 +41,4 @@ class NavBar extends Component {
   }
 }
 
-export default NavBar;
+export default NavBar
