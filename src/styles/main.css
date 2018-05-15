@@ -136,7 +136,6 @@ i, span {
 #sidebar ul li.active > a, a[aria-expanded='true'] {
     color: #fff;
     background: #6d7fcc;
-    background: linear-gradient(141deg, #0fb8ad 0%, #1fc8db 51%, #2cb5e8 75%)
 }
 
 a[data-toggle='collapse'] {
@@ -194,6 +193,9 @@ a.article, a.article:hover {
     transition: all 0.3s;
 }
 
+#sidebarCollapse {
+    background: #6d7fcc;
+}
 
 /* ---------------------------------------------------
     MEDIAQUERIES
