@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
-import { Grid, Row, Col, Panel, ButtonToolbar, Button } from 'react-bootstrap'
+import { Grid, Row, Col, Panel, ButtonToolbar, Button, Nav, NavItem } from 'react-bootstrap'
 import NavBar from '../components/common/NavBar'
+import Main from './Main'
 import QuillEditor from '../components/QuillEditor'
 import '../styles/index.css'
 
@@ -8,7 +9,8 @@ class Index extends Component {
   render() {
     return (
       <div className='main'>
-        <NavBar/>
+        <Main/>>
+        {/* <NavBar/>
         <Grid>
           <Row className='show-grid'>
             <Col xs={12} md={12}>
@@ -35,7 +37,7 @@ class Index extends Component {
               </Panel>
             </Col>
           </Row>
-        </Grid>
+        </Grid> */}
       </div>
     )
   }
