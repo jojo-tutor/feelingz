@@ -9,7 +9,7 @@ class Index extends Component {
   render() {
     return (
       <div className='main'>
-        <Main/>>
+        <Main/>
         {/* <NavBar/>
         <Grid>
           <Row className='show-grid'>
