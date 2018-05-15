@@ -1,11 +1,15 @@
 import React, { Component } from 'react'
+import { Collapse } from 'react-bootstrap'
 import '../styles/main.css'
 
 class Index extends Component {
   state = {
-    active: false
+    active: false,
+    home_sub_show: false,
+    page_sub_show: false
   }
   render() {
+    const { home_sub_show, page_sub_show } = this.state
     return (
       <div className='wrapper'>
         <nav id='sidebar' className={`${this.state.active ? 'active' : ''}`}>
@@ -16,30 +20,34 @@ class Index extends Component {
 
             <ul className='list-unstyled components'>
                 <li className='active'>
-                    <a href='#homeSubmenu' data-toggle='collapse' aria-expanded='false'>
+                    <a data-toggle='collapse' aria-expanded={home_sub_show} onClick={() => this.setState(({ home_sub_show }) => ({ home_sub_show: !home_sub_show }))}>
                         <i className='glyphicon glyphicon-home'></i>
                         Home
                     </a>
-                    <ul className='collapse list-unstyled' id='homeSubmenu'>
-                        <li><a href='#'>Home 1</a></li>
-                        <li><a href='#'>Home 2</a></li>
-                        <li><a href='#'>Home 3</a></li>
-                    </ul>
+                    <Collapse in={home_sub_show}>
+                      <ul className={'list-unstyled'}>
+                          <li><a href='#'>Home 1</a></li>
+                          <li><a href='#'>Home 2</a></li>
+                          <li><a href='#'>Home 3</a></li>
+                      </ul>
+                    </Collapse>
                 </li>
                 <li>
                     <a href='#'>
                         <i className='glyphicon glyphicon-briefcase'></i>
                         About
                     </a>
-                    <a href='#pageSubmenu' data-toggle='collapse' aria-expanded='false'>
+                    <a data-toggle='collapse' aria-expanded={page_sub_show} onClick={() => this.setState(({ page_sub_show }) => ({ page_sub_show: !page_sub_show }))}>
                         <i className='glyphicon glyphicon-duplicate'></i>
                         Pages
                     </a>
-                    <ul className='collapse list-unstyled' id='pageSubmenu'>
-                        <li><a href='#'>Page 1</a></li>
-                        <li><a href='#'>Page 2</a></li>
-                        <li><a href='#'>Page 3</a></li>
-                    </ul>
+                    <Collapse in={page_sub_show}>
+                      <ul className='list-unstyled'>
+                          <li><a href='#'>Page 1</a></li>
+                          <li><a href='#'>Page 2</a></li>
+                          <li><a href='#'>Page 3</a></li>
+                      </ul>
+                    </Collapse>
                 </li>
                 <li>
                     <a href='#'>

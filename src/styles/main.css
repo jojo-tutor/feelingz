@@ -138,7 +138,6 @@ i, span {
     background: #6d7fcc;
 }
 
-
 a[data-toggle='collapse'] {
     position: relative;
 }
@@ -154,7 +153,6 @@ a[aria-expanded='false']::before, a[aria-expanded='true']::before {
 a[aria-expanded='true']::before {
     content: '\e260';
 }
-
 
 ul ul a {
     font-size: 0.9em !important;
