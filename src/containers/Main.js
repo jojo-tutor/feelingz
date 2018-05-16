@@ -32,13 +32,13 @@ class Index extends Component {
                     </a>
                     <a data-toggle='collapse' aria-expanded={page_sub_show} onClick={() => this.setState(({ page_sub_show }) => ({ page_sub_show: !page_sub_show }))}>
                         <i className='glyphicon glyphicon-duplicate'></i>
-                        Pages
+                        Apps
                     </a>
                     <Collapse in={page_sub_show}>
                       <ul className='list-unstyled'>
-                          <li><a href='#'>Page 1</a></li>
-                          <li><a href='#'>Page 2</a></li>
-                          <li><a href='#'>Page 3</a></li>
+                          <li><a href='#'>App 1</a></li>
+                          <li><a href='#'>App 2</a></li>
+                          <li><a href='#'>App 3</a></li>
                       </ul>
                     </Collapse>
                 </li>
